@@ -1,11 +1,8 @@
-# celopg-skills
-Official Claude AI skills for the Celo Public Goods ecosystem
-
-# High Velocity Token Manager — Claude Skill
+# Token Manager — Claude Skill
 
 > **Deploy and manage ERC-20 tokens on Celo and Ethereum directly through Claude AI.**
 
-This skill teaches Claude how to use the [High Velocity Token Manager](https://token.celopg.eco) — guiding users through token creation, cross-chain deployment, and L2-to-L1 migration using natural conversation.
+This skill teaches Claude how to use the [Token Manager](https://token.celopg.eco) — guiding users through token creation, cross-chain deployment, and L2-to-L1 migration using natural conversation.
 
 ---
 
@@ -36,24 +33,22 @@ Claude will walk you through every step — wallet setup, parameter selection, t
 
 ### Option A: Upload to Claude.ai (Recommended for most users)
 
-1. **Download** the skill — click **Code → Download ZIP** on this page, or grab the latest release from [Releases](../../releases)
-2. **Unzip** the downloaded file — you'll find a folder called `high-velocity-token-manager/`
-3. **Re-zip just that folder** — the upload requires a zip containing the skill folder directly
-4. **Upload to Claude.ai**:
+1. **Download** `token-manager.zip` from the latest [Release](../../releases)
+2. **Upload to Claude.ai**:
    - Go to [claude.ai](https://claude.ai) → click your profile → **Settings**
    - Navigate to **Capabilities → Skills**
-   - Click **Upload skill** and select your zip file
-5. **Enable the skill** — toggle it ON in your skills list
-6. **Test it** — ask Claude: *"Help me create a token on Celo"*
+   - Click **Upload skill** and select `token-manager.zip`
+3. **Enable the skill** — toggle it ON in your skills list
+4. **Test it** — ask Claude: *"Help me create a token on Celo"*
 
 ### Option B: Claude Code (for developers)
 
 ```bash
 # Clone the repo
-git clone https://github.com/celopg/claude-skills.git
+git clone https://github.com/EcoLabsHQ/celopg-skills.git
 
 # Copy the skill to your Claude Code skills directory
-cp -r claude-skills/high-velocity-token-manager ~/.claude/skills/
+cp -r celopg-skills/token-manager ~/.claude/skills/
 ```
 
 ### Option C: MCP + Skill (Full AI Agent Setup)
@@ -81,7 +76,7 @@ For the best experience, use this skill together with the Token Manager MCP serv
 ## What's in the Skill Folder
 
 ```
-high-velocity-token-manager/
+token-manager/
 ├── SKILL.md                          # Main skill — all workflows and instructions
 ├── references/
 │   ├── api-guide.md                  # MCP tools + REST API reference
@@ -110,8 +105,8 @@ high-velocity-token-manager/
 You: Create a token called "Farmers Market Token" with symbol FMT,
      1 million supply, on Celo
 
-Claude: I'll walk you through creating FMT on Celo using the High Velocity
-        Token Manager. Let's start by gathering your token details...
+Claude: I'll walk you through creating FMT on Celo using the Token
+        Manager. Let's start by gathering your token details...
         [guides through each step]
 ```
 
